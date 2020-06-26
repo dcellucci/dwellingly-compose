@@ -1,0 +1,7 @@
+FROM 'node:14'
+WORKDIR /code
+ADD package.json /code
+RUN npm i --verbose
+RUN npm i -g nodemon
+ADD . /code
+CMD nodemon exec npm start

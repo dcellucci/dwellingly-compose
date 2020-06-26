@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build: 
+      context: ./dwellinglybackend
+      dockerfile: ../BackendDockerfile
+    volumes:
+      - "./dwellinglybackend:/code"
+    command: pipenv run flask run --host 0.0.0.0
+  frontend:
+    build:
+      context: ./dwellingly-app
+      dockerfile: ../FrontendDockerfile
+    volumes:
+      - ./dwellingly-app:/code/
+      - nodemodules:/code/node_modules
+    ports:
+      - 3000:3000
+    environment:
+      - CI=true
+      - REACT_APP_HOST=backend
+    command: nodemon exec npm start
+
+volumes:
+  nodemodules: {}

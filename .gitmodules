@@ -1,0 +1,6 @@
+[submodule "dwellingly-app"]
+	path = dwellingly-app
+	url = https://github.com/codeforpdx/dwellingly-app.git
+[submodule "dwellinglybackend"]
+	path = dwellinglybackend
+	url = https://github.com/codeforpdx/dwellinglybackend.git
