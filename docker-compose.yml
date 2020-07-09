@@ -6,7 +6,7 @@ services:
       dockerfile: ../BackendDockerfile
     volumes:
       - "./dwellinglybackend:/code"
-    command: pipenv run flask run --host 0.0.0.0
+    command: sh -c "pipenv run python seed_db.py && pipenv run flask run --host 0.0.0.0"
   frontend:
     build:
       context: ./dwellingly-app
