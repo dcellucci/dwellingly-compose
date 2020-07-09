@@ -6,15 +6,6 @@ This repo has code related to the creation of the dwellingly stack as a set of c
 
 Install [docker and docker-compose](https://docs.docker.com/compose/install/) for your host platform.
 
-### Ubuntu 
-
-For Ubuntu 20.04, run
-
-```
-sudo apt update
-sudo apt install docker.io docker-compose -y
-```
-
 ## Setup
 The repo uses submodules. Run these two commands to populate the folders with the source code for the frontend and backend.
 
